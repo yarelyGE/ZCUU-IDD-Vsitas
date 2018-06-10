@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>IDD Visitas</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main2.css"
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="visitas.aspx">IDD Visitas</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" id="liNuevaVisita" runat="server">
+              <li class="nav-item active">
+                <a class="nav-link" href="NuevaVisita.aspx">Nueva requisicion <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active" id="liUsuarios" runat="server">
+                <a class="nav-link" href="Usuarios.aspx">Usuarios</a>
+              </li>
+              <li class="nav-item active" id="liSalir" runat="server">
+                <a class="nav-link" href="login.aspx">Salir</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <script src="js/main.js"></script>
+        <script src="js/menu.js"></script>
+    </div>
+    </form>
+</body>
+</html>

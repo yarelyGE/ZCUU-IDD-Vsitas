@@ -1,0 +1,580 @@
+﻿/*======= Globales ==============*/
+html {
+    background: url(../img/textura1.png) repeat;
+}
+a, a:hover{
+    text-decoration: none;
+    color: inherit;
+    outline: 0;
+}
+input, textarea, select, span, button {
+    outline: 0;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+    input[type="text"], input[type="password"], input[type="date"], select {
+        width: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+textarea {
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    min-height: 100px;
+    max-height: 200px;
+}
+label {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    margin: 20px auto;
+    width: auto;
+}
+
+a.btn {
+    display: inline-block;
+}
+
+h4 {
+    position: relative;
+    margin: 0 0 30px 0;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+}
+
+    h4:after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 35px;
+        background: #5bc2ce;
+        top: 100%;
+        left: 0;
+        margin-top: 10px;
+    }
+
+div.jumbotron {
+    background: url(../img/tab1.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 75vh;
+}
+
+@media only screen and (min-width: 768px) {
+    div.jumbotron {
+        height: 65vh;
+    }
+}
+
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../img/Preloader_2.gif) center no-repeat #fff;
+}
+
+.contenido {
+    margin-bottom: 20px;
+    padding: 30px;
+    background: linear-gradient(to right, #f7f8f9 60%,#e5e5e5 100%);
+    box-shadow: 4px 4px 20px 0px rgba(0,0,0,0.3);
+}
+
+.wrap {
+    margin: 0 auto;
+    position: absolute;
+    left: 2.5%;
+    right: 2.5%;
+    top: 360px;
+    z-index: 0;
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+    .wrap {
+        top: 300px;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .wrap {
+        top: 380px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .wrap {
+        top: 350px;
+    }
+}
+
+div.titulo {
+    position: absolute;
+    top: 25%;
+    width: 70%;
+    background: rgba(0,0,0,0.4);
+    padding: 20px;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-left: 5px solid #5BC2CE;
+    animation: fadeIn 1s ease-in both;
+    animation-delay: 1s;
+}
+
+@media only screen and (min-width: 768px) {
+    div.titulo {
+        top: 20%;
+        width: 50%;
+    }
+}
+
+div.titulo h1, div.titulo p {
+    color: whitesmoke;
+}
+/*======= Animaciones ==============*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+/*====================== MENU ===========================*/
+.slideout-menu {
+    position: fixed; 
+    top: 0; 
+    left: -250px; 
+    width: 250px; 
+    height: 100%; 
+    background: #333; 
+    z-index: 100;
+}
+.boton-menu {
+    padding: 10px;
+    margin: 0 20px;
+    text-decoration: none;
+    color: #f3f6f8;
+    font-weight: bold;
+    font-size: 1.4em;
+    text-shadow: 3px 3px rgba(0,0,0,0.1);
+    transition: all .5s ease;
+    font-family: 'Oswald', sans-serif;
+    font-size:2rem;
+}
+.boton-menu:hover{
+    color:#E01414;
+}
+.boton-menu i{
+    margin-right:5px;
+}
+@media only screen and (min-width:768px){
+    .slideout-menu{
+        top:85px;
+    }
+}
+.slideout-menu h3 {
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    padding: 12px 10px;
+    color: #f3f6f8;
+    font-size: 1.6em;
+    font-weight: bold;
+    border-bottom: 4px solid #222;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 3px 3px rgba(0,0,0,0.1);
+}
+/*Boton de cerrado*/
+.slideout-menu .slideout-menu-toggle {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    display: inline-block;
+    padding: 6px 9px 5px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1;
+    color: #f3f6f8;
+    text-decoration: none;
+    vertical-align: top;
+    transition: all .5s ease;
+}
+.slideout-menu .slideout-menu-toggle:hover {
+	color: #E01414;
+}
+
+.slideout-menu ul {
+	list-style: none;
+	font-weight: 300;
+	border-top: 1px solid #151515;
+	border-bottom: 1px solid #454545;
+}
+.slideout-menu ul li {
+	border-top: 1px solid #454545;
+	border-bottom: 1px solid #151515;
+}
+.slideout-menu ul li a {
+    font-family: 'Oswald', sans-serif;
+	position: relative;
+	display: block;
+	padding: 10px;
+	color: #8f9598;
+	text-decoration: none;
+    transition: all .5s ease;
+}
+.slideout-menu ul li a:hover {
+	background: #000;
+	color: #f3f6f8;
+}
+.slideout-menu ul li a i {
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	opacity: .5;
+}
+/*hover bob*/
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
+  }
+
+  50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
+  }
+
+  50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
+  }
+}
+
+@-webkit-keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
+  }
+}
+
+@keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
+  }
+}
+
+.hvr-bob {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
+nav.navbar {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+}
+@media only screen and (min-width: 1000px) {
+    nav.navbar {
+        background: rgba(0,0,0,0.4);
+    }
+}
+nav.navbar a{
+  transition: all 0.6s ease-in-out;
+  padding-left: 5px;
+}
+nav.navbar a:hover{
+  color: whitesmoke;
+}
+/*======= Login ==============*/
+section.login{
+    background:url(../img/login1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height:100vh;
+    padding: 15% 0;
+}
+section.login div.contenido-login{
+    width:300px;
+    margin: 0 auto;
+    padding:20px;
+    background: rgba(0,0,0,0.8);
+    animation: fadeIn 1s ease-in both;
+    border-left: 5px solid #007bff;
+    animation: fadeIn 1s ease-in both;
+    animation-delay: .6s;
+    box-shadow: 4px 4px 20px 0px rgba(0,0,0,0.3);
+}
+div.contenido-login label {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #007bff;
+    text-transform: uppercase;
+}
+/*============ VISITAS =================================**/
+section.ConsultaAprobador .btn{
+    display:inline;
+}
+#RequisDrop{
+    width:200px;
+}
+section.ConsultaAprobador div.container{
+    max-width:1600px;
+}
+
+section.ConsultaAprobador div.contenido{
+    width:100%;
+    margin:5px;
+}
+section.ConsultaAprobador div#divBotones {
+    width: 500px;
+    margin: 0 auto;
+}
+.buttonSpecial {
+    border: none;
+    font-size: 30px;
+    outline: none;
+    background-color: inherit;
+    
+    transition: all .3s ease;
+}
+
+.buttonSpecial:hover {
+    color: #5bc2ce;
+    cursor: pointer;
+}
+/*GridView1 (No pendientes)*/
+.mGrid {
+    width: 100%;
+    background-color: #b7c9fb;
+    margin: 5px 0 10px 0;
+    border: solid 1px #525252;
+    border-collapse: collapse;
+}
+
+.mGrid td {
+    padding: 2px;
+    border: solid 1px #c1c1c1;
+    /*color: #717171;*/
+    color: #000000;
+}
+
+.mGrid tr:hover {
+    background-color:#e2e2e2;
+}
+
+.mGrid th {
+    padding: 4px 2px;
+    color: #fff;
+    background: #424242 url(grd_head.png) repeat-x top;
+    border-left: solid 1px #525252;
+    font-size: 0.9em;
+}
+
+.mGrid .alt {
+    background: #fcfcfc url(grd_alt.png) repeat-x top;
+}
+
+.mGrid .pgr {
+    background: #424242 url(grd_pgr.png) repeat-x top;
+}
+
+.mGrid .pgr table {
+    margin: 5px 0;
+}
+
+.mGrid .pgr td {
+    border-width: 0;
+    padding: 0 6px;
+    border-left: solid 1px #666;
+    font-weight: bold;
+    color: #fff;
+    line-height: 12px;
+}
+
+.mGrid .pgr a {
+    color: #666;
+    text-decoration: none;
+}
+
+.mGrid .pgr a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+
+/*GridView2 (Pendientes)*/
+.mGrid1 {
+    width: 100%;
+    background-color: #fbc2c2;
+    margin: 5px 0 10px 0;
+    border: solid 1px #525252;
+    border-collapse: collapse;
+}
+
+.mGrid1 td {
+    padding: 2px;
+    border: solid 1px #c1c1c1;
+    color: #000000;
+}
+.mGrid1 tr:hover {
+    background-color: #e2e2e2;
+}
+
+.mGrid1 th {
+    padding: 4px 2px;
+    color: #fff;
+    background: #424242 url(grd_head.png) repeat-x top;
+    border-left: solid 1px #525252;
+    font-size: 0.9em;
+}
+
+.mGrid1 .alt {
+    background: #fcfcfc url(grd_alt.png) repeat-x top;
+}
+
+.mGrid1 .pgr {
+    background: #424242 url(grd_pgr.png) repeat-x top;
+}
+
+.mGrid1 .pgr table {
+    margin: 5px 0;
+}
+
+.mGrid1 .pgr td {
+    border-width: 0;
+    padding: 0 6px;
+    border-left: solid 1px #666;
+    font-weight: bold;
+    color: #fff;
+    line-height: 12px;
+}
+
+.mGrid1.pgr a {
+    color: #666;
+    text-decoration: none;
+}
+
+.mGrid1 .pgr a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+/*============ VISITA =================================**/
+section.Visita div.contenido .btn {
+    display: inline;
+}
+section.Visita label.titulosVisita, label.titulosVisitaAp {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+label.datosVisita{
+    background-color:#fff;
+    width:80%;
+    margin: 0 auto;
+}
+div.contenido input[type="checkbox"]{
+    width:200px;
+    margin:50px auto;
+}
+div.fila{
+    border-bottom:solid 2px #5bc2ce;
+}
+section.Visita div.contenido a{
+    font-size:1.6rem;
+    margin-top:50px;
+
+}
+section.Visita div.contenido a i{
+    transition: all .5s ease-in-out;
+    color:#5bc2ce;
+}
+div.contenido a:hover i.cambioIco {
+    color: #E01414;
+}
+
+/*==============Nueva Visita ============================*/
+section.NuevaVisitas div.contenido .btn {
+    display: inline;
+}
+div.form-visita label {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+div.form-visita input[type="checkbox"] {
+    width: 200px;
+    margin: 10px auto;
+    display:block;
+}
+section.NuevaVisitas div#tres p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+}
+/*============ Usuarios =======================*/
+section.Usuarios div.contenido{
+    margin-left:5px;
+}
+section.Usuarios div.contenido label {
+    font-weight: bold;
+    font-size: 1.3rem;
+}

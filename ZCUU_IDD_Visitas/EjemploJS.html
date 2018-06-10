@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    W:
+    <input type="text" id="w" onchange="cambio()" />
+    <br />
+    X:
+    <input type="text" id="x" onchange="cambio()" />
+    <br />
+    Y:
+    <input type="text" id="y" onchange="cambio()" />
+    <br />
+    <label id="labelHola" hidden="hidden">HOLA</label>
+    <input type="text" id="a" onchange=""/>
+</body>
+</html>
+
+<script>
+    var w = document.getElementById('w');
+    var x = document.getElementById('x');
+    var y = document.getElementById('y');
+    var m = document.getElementById('labelHola');
+
+    function cambio() {
+        if (w.value == 2 &&
+            x.value == 2 &&
+            y.value == 2) {
+            m.removeAttribute("hidden", "hidden");
+        }
+    }
+</script>

@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="reclutamiento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="curp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="reclutamientoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reclutamientoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="infoEmpleado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idempleado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="infoEmpleadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoEmpleadoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="infoSueldo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idempleado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="infoSueldoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoSueldoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="infoEnfermeria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idempleado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="infoEnfermeriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoEnfermeriaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Empleado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idempleado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmpleadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmpleadoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Bajas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idempleado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BajasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BajasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaEmpleado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="texto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaEmpleadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listaEmpleadoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ausentismo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idempleado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ausentismoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ausentismoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="incapacidades">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idempleado" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechai" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaf" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="incapacidadesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="incapacidadesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="supervisor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idsupervisor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="supervisorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="supervisorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="divisiones">
+        <s:complexType />
+      </s:element>
+      <s:element name="divisionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="divisionesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="todosEmpleados">
+        <s:complexType />
+      </s:element>
+      <s:element name="todosEmpleadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="todosEmpleadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vacaciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idempleado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vacacionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vacacionesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="infoEmpleadoNSS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idempleado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="infoEmpleadoNSSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoEmpleadoNSSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="reclutamientoSoapIn">
+    <wsdl:part name="parameters" element="tns:reclutamiento" />
+  </wsdl:message>
+  <wsdl:message name="reclutamientoSoapOut">
+    <wsdl:part name="parameters" element="tns:reclutamientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="infoEmpleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:infoEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="infoEmpleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:infoEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="infoSueldoSoapIn">
+    <wsdl:part name="parameters" element="tns:infoSueldo" />
+  </wsdl:message>
+  <wsdl:message name="infoSueldoSoapOut">
+    <wsdl:part name="parameters" element="tns:infoSueldoResponse" />
+  </wsdl:message>
+  <wsdl:message name="infoEnfermeriaSoapIn">
+    <wsdl:part name="parameters" element="tns:infoEnfermeria" />
+  </wsdl:message>
+  <wsdl:message name="infoEnfermeriaSoapOut">
+    <wsdl:part name="parameters" element="tns:infoEnfermeriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmpleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:Empleado" />
+  </wsdl:message>
+  <wsdl:message name="EmpleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:EmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BajasSoapIn">
+    <wsdl:part name="parameters" element="tns:Bajas" />
+  </wsdl:message>
+  <wsdl:message name="BajasSoapOut">
+    <wsdl:part name="parameters" element="tns:BajasResponse" />
+  </wsdl:message>
+  <wsdl:message name="listaEmpleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:listaEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="listaEmpleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:listaEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ausentismoSoapIn">
+    <wsdl:part name="parameters" element="tns:ausentismo" />
+  </wsdl:message>
+  <wsdl:message name="ausentismoSoapOut">
+    <wsdl:part name="parameters" element="tns:ausentismoResponse" />
+  </wsdl:message>
+  <wsdl:message name="incapacidadesSoapIn">
+    <wsdl:part name="parameters" element="tns:incapacidades" />
+  </wsdl:message>
+  <wsdl:message name="incapacidadesSoapOut">
+    <wsdl:part name="parameters" element="tns:incapacidadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="supervisorSoapIn">
+    <wsdl:part name="parameters" element="tns:supervisor" />
+  </wsdl:message>
+  <wsdl:message name="supervisorSoapOut">
+    <wsdl:part name="parameters" element="tns:supervisorResponse" />
+  </wsdl:message>
+  <wsdl:message name="divisionesSoapIn">
+    <wsdl:part name="parameters" element="tns:divisiones" />
+  </wsdl:message>
+  <wsdl:message name="divisionesSoapOut">
+    <wsdl:part name="parameters" element="tns:divisionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="todosEmpleadosSoapIn">
+    <wsdl:part name="parameters" element="tns:todosEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="todosEmpleadosSoapOut">
+    <wsdl:part name="parameters" element="tns:todosEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="vacacionesSoapIn">
+    <wsdl:part name="parameters" element="tns:vacaciones" />
+  </wsdl:message>
+  <wsdl:message name="vacacionesSoapOut">
+    <wsdl:part name="parameters" element="tns:vacacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="infoEmpleadoNSSSoapIn">
+    <wsdl:part name="parameters" element="tns:infoEmpleadoNSS" />
+  </wsdl:message>
+  <wsdl:message name="infoEmpleadoNSSSoapOut">
+    <wsdl:part name="parameters" element="tns:infoEmpleadoNSSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="servicioRHSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="reclutamiento">
+      <wsdl:input message="tns:reclutamientoSoapIn" />
+      <wsdl:output message="tns:reclutamientoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="infoEmpleado">
+      <wsdl:input message="tns:infoEmpleadoSoapIn" />
+      <wsdl:output message="tns:infoEmpleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="infoSueldo">
+      <wsdl:input message="tns:infoSueldoSoapIn" />
+      <wsdl:output message="tns:infoSueldoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="infoEnfermeria">
+      <wsdl:input message="tns:infoEnfermeriaSoapIn" />
+      <wsdl:output message="tns:infoEnfermeriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Empleado">
+      <wsdl:input message="tns:EmpleadoSoapIn" />
+      <wsdl:output message="tns:EmpleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Bajas">
+      <wsdl:input message="tns:BajasSoapIn" />
+      <wsdl:output message="tns:BajasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listaEmpleado">
+      <wsdl:input message="tns:listaEmpleadoSoapIn" />
+      <wsdl:output message="tns:listaEmpleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ausentismo">
+      <wsdl:input message="tns:ausentismoSoapIn" />
+      <wsdl:output message="tns:ausentismoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="incapacidades">
+      <wsdl:input message="tns:incapacidadesSoapIn" />
+      <wsdl:output message="tns:incapacidadesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="supervisor">
+      <wsdl:input message="tns:supervisorSoapIn" />
+      <wsdl:output message="tns:supervisorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="divisiones">
+      <wsdl:input message="tns:divisionesSoapIn" />
+      <wsdl:output message="tns:divisionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="todosEmpleados">
+      <wsdl:input message="tns:todosEmpleadosSoapIn" />
+      <wsdl:output message="tns:todosEmpleadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vacaciones">
+      <wsdl:input message="tns:vacacionesSoapIn" />
+      <wsdl:output message="tns:vacacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="infoEmpleadoNSS">
+      <wsdl:input message="tns:infoEmpleadoNSSSoapIn" />
+      <wsdl:output message="tns:infoEmpleadoNSSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="servicioRHSoap" type="tns:servicioRHSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reclutamiento">
+      <soap:operation soapAction="http://tempuri.org/reclutamiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="infoEmpleado">
+      <soap:operation soapAction="http://tempuri.org/infoEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="infoSueldo">
+      <soap:operation soapAction="http://tempuri.org/infoSueldo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="infoEnfermeria">
+      <soap:operation soapAction="http://tempuri.org/infoEnfermeria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Empleado">
+      <soap:operation soapAction="http://tempuri.org/Empleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bajas">
+      <soap:operation soapAction="http://tempuri.org/Bajas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaEmpleado">
+      <soap:operation soapAction="http://tempuri.org/listaEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ausentismo">
+      <soap:operation soapAction="http://tempuri.org/ausentismo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="incapacidades">
+      <soap:operation soapAction="http://tempuri.org/incapacidades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="supervisor">
+      <soap:operation soapAction="http://tempuri.org/supervisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="divisiones">
+      <soap:operation soapAction="http://tempuri.org/divisiones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="todosEmpleados">
+      <soap:operation soapAction="http://tempuri.org/todosEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vacaciones">
+      <soap:operation soapAction="http://tempuri.org/vacaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="infoEmpleadoNSS">
+      <soap:operation soapAction="http://tempuri.org/infoEmpleadoNSS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="servicioRHSoap12" type="tns:servicioRHSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reclutamiento">
+      <soap12:operation soapAction="http://tempuri.org/reclutamiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="infoEmpleado">
+      <soap12:operation soapAction="http://tempuri.org/infoEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="infoSueldo">
+      <soap12:operation soapAction="http://tempuri.org/infoSueldo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="infoEnfermeria">
+      <soap12:operation soapAction="http://tempuri.org/infoEnfermeria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Empleado">
+      <soap12:operation soapAction="http://tempuri.org/Empleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bajas">
+      <soap12:operation soapAction="http://tempuri.org/Bajas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaEmpleado">
+      <soap12:operation soapAction="http://tempuri.org/listaEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ausentismo">
+      <soap12:operation soapAction="http://tempuri.org/ausentismo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="incapacidades">
+      <soap12:operation soapAction="http://tempuri.org/incapacidades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="supervisor">
+      <soap12:operation soapAction="http://tempuri.org/supervisor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="divisiones">
+      <soap12:operation soapAction="http://tempuri.org/divisiones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="todosEmpleados">
+      <soap12:operation soapAction="http://tempuri.org/todosEmpleados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vacaciones">
+      <soap12:operation soapAction="http://tempuri.org/vacaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="infoEmpleadoNSS">
+      <soap12:operation soapAction="http://tempuri.org/infoEmpleadoNSS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="servicioRH">
+    <wsdl:port name="servicioRHSoap" binding="tns:servicioRHSoap">
+      <soap:address location="http://schi-iis1zem/hr/serviciorh.asmx" />
+    </wsdl:port>
+    <wsdl:port name="servicioRHSoap12" binding="tns:servicioRHSoap12">
+      <soap12:address location="http://schi-iis1zem/hr/serviciorh.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
